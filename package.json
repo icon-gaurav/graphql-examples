@@ -1,0 +1,14 @@
+{
+  "name": "graphql-examples",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "apollo-server": "^3.10.0",
+    "apollo-server-express": "^3.10.0",
+    "graphql": "^16.5.0",
+    "graphql-tools": "^8.3.2"
+  }
+}
