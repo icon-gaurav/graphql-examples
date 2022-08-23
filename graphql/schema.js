@@ -13,6 +13,10 @@ const typeDefs = gql`
         listOfTodos:[Todo]
     }
     
+    type Mutation{
+        createTodo(title:String!):Todo
+    }
+    
 `;
 
 const schema = makeExecutableSchema({

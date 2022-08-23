@@ -18,6 +18,15 @@ const resolvers = {
                     title: "Exercise"
                 }]
         }
+    },
+
+    Mutation: {
+        createTodo: (_parent, {title}, _info) => {
+            return {
+                id: Math.floor(Math.random() * 100),
+                title: title
+            }
+        }
     }
 };
 
