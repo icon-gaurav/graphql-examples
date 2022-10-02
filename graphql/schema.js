@@ -7,6 +7,8 @@ const typeDefs = gql`
     type Todo{
         id:ID!
         title:String
+        createdAt:String
+        updatedAt:String
     }
     
     type Query{

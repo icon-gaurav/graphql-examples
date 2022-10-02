@@ -1,3 +1,4 @@
+const Todo = require('../models/todo');
 const resolvers = {
     Query: {
         listOfTodos: () => {
@@ -22,10 +23,12 @@ const resolvers = {
 
     Mutation: {
         createTodo: (_parent, {title}, _info) => {
-            return {
-                id: Math.floor(Math.random() * 100),
-                title: title
-            }
+            let newTodo = new Todo({
+                title
+            });
+            return newTodo.save()
+                .then(todo => todo)
+                .catch(e => e)
         }
     }
 };
